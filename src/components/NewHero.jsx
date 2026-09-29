@@ -4,6 +4,9 @@ import './NewHero.css';
 export function NewHero({ navigate }) {
   const [activeIdx, setActiveIdx] = useState(0);
   const panelsRef = useRef(null);
+  const touchStartX = useRef(0);
+  const touchStartY = useRef(0);
+  const isSwiping = useRef(false);
 
   const panels = [
     {
@@ -34,10 +37,16 @@ export function NewHero({ navigate }) {
 
   const scrollToPanel = (idx) => {
     setActiveIdx(idx);
-    if (panelsRef.current && window.innerWidth <= 680) {
-      const cards = panelsRef.current.querySelectorAll('.split-panel-card');
+    if (panelsRef.current) {
+      const container = panelsRef.current;
+      const cards = container.querySelectorAll('.split-panel-card');
       if (cards[idx]) {
-        cards[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        const card = cards[idx];
+        const targetLeft = card.offsetLeft - (container.offsetWidth - card.offsetWidth) / 2;
+        container.scrollTo({
+          left: Math.max(0, targetLeft),
+          behavior: 'smooth'
+        });
       }
     }
   };
@@ -54,7 +63,25 @@ export function NewHero({ navigate }) {
     scrollToPanel(next);
   };
 
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+    isSwiping.current = false;
+  };
+
+  const handleTouchMove = (e) => {
+    const dx = Math.abs(e.touches[0].clientX - touchStartX.current);
+    const dy = Math.abs(e.touches[0].clientY - touchStartY.current);
+    if (dx > 8 || dy > 8) {
+      isSwiping.current = true;
+    }
+  };
+
   const handlePanelClick = (e, path, idx) => {
+    if (isSwiping.current) {
+      e.preventDefault();
+      return;
+    }
     e.preventDefault();
     setActiveIdx(idx);
     navigate(path);
@@ -104,34 +131,38 @@ export function NewHero({ navigate }) {
       </div>
 
       {/* Right 3-Panel Discipline Showcase */}
-      <div
-        className="split-hero-panels"
-        ref={panelsRef}
-        onScroll={handleScroll}
-      >
-        {panels.map((panel, idx) => (
-          <a
-            key={panel.id}
-            href={panel.href}
-            className={`split-panel-card ${activeIdx === idx ? 'active' : ''}`}
-            onClick={(e) => handlePanelClick(e, panel.href, idx)}
-            aria-label={panel.ariaLabel}
-          >
-            <div
-              className="split-panel-bg"
-              style={{ backgroundImage: `url(${panel.image})` }}
-            />
-            <div className="split-panel-overlay" />
+      <div className="split-hero-showcase">
+        <div
+          className="split-hero-panels"
+          ref={panelsRef}
+          onScroll={handleScroll}
+        >
+          {panels.map((panel, idx) => (
+            <a
+              key={panel.id}
+              href={panel.href}
+              className={`split-panel-card ${activeIdx === idx ? 'active' : ''}`}
+              onClick={(e) => handlePanelClick(e, panel.href, idx)}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              aria-label={panel.ariaLabel}
+            >
+              <div
+                className="split-panel-bg"
+                style={{ backgroundImage: `url(${panel.image})` }}
+              />
+              <div className="split-panel-overlay" />
 
-            <div className="split-panel-content">
-              <span className="split-panel-tick" />
-              <div className="split-panel-text">
-                <h3 className="split-panel-title">{panel.title}</h3>
-                <p className="split-panel-sub">{panel.subtitle}</p>
+              <div className="split-panel-content">
+                <span className="split-panel-tick" />
+                <div className="split-panel-text">
+                  <h3 className="split-panel-title">{panel.title}</h3>
+                  <p className="split-panel-sub">{panel.subtitle}</p>
+                </div>
               </div>
-            </div>
-          </a>
-        ))}
+            </a>
+          ))}
+        </div>
 
         {/* Carousel / Navigation Controls at bottom right */}
         <div className="split-hero-nav">

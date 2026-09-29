@@ -1,0 +1,462 @@
+/* ==========================================================================
+   LUXURY DARK GOLD MARBLE FRAMED FOOTER (Pixel-Perfect Reference Match)
+   ========================================================================== */
+.luxury-marble-footer {
+  background: radial-gradient(ellipse 65% 55% at 50% 8%, rgba(212, 145, 61, 0.18) 0%, transparent 68%),
+              linear-gradient(180deg, rgba(14, 12, 11, 0.94) 0%, rgba(8, 7, 6, 0.98) 100%),
+              url('/dark-gold-marble.webp') center / cover no-repeat;
+  color: #f7f3ed;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 60px 4vw max(35px, env(safe-area-inset-bottom, 35px));
+  border-top: 1px solid rgba(197, 154, 100, 0.25);
+}
+
+.footer-inner-container {
+  max-width: 1360px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ----------------------------------------------------
+   MAIN 5-COLUMN FRAMED GRID
+   ---------------------------------------------------- */
+.footer-main-grid {
+  display: grid;
+  grid-template-columns: 1.8fr 0.85fr 0.95fr 0.8fr 1.35fr;
+  border-top: 1px solid rgba(197, 154, 100, 0.35);
+  border-bottom: 1px solid rgba(197, 154, 100, 0.35);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.footer-col {
+  padding: 44px 28px;
+  border-right: 1px solid rgba(197, 154, 100, 0.28);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.footer-col:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.footer-col-brand {
+  padding-left: 0;
+  padding-right: 36px;
+  justify-content: flex-start;
+}
+
+/* ----------------------------------------------------
+   COLUMN 1: BRAND CUTOUT & DISCIPLINES
+   ---------------------------------------------------- */
+.footer-logo-link {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  max-width: 440px;
+  user-select: none;
+  margin-bottom: 24px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-logo-link:hover {
+  transform: translateY(-1px);
+  filter: drop-shadow(0 4px 18px rgba(212, 145, 61, 0.35));
+}
+
+.footer-brand-cutout-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.6)) contrast(1.15) brightness(1.05);
+}
+
+.footer-disciplines-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 9px;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #c9c1b5;
+  line-height: 1.6;
+}
+
+.footer-disciplines-row a {
+  color: #c9c1b5;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.footer-disciplines-row a:hover {
+  color: #f5c469;
+}
+
+.footer-pipe {
+  color: #a87d46;
+  opacity: 0.75;
+  font-size: 10px;
+}
+
+/* ----------------------------------------------------
+   COLUMNS 2, 3, 4: NAV LINKS (EXPLORE, EXPERTISE, COMPANY)
+   ---------------------------------------------------- */
+.footer-col-heading {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #d4a56b;
+  margin: 0 0 24px;
+}
+
+.footer-col-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-col-nav a {
+  color: #d8d2c8;
+  font-size: 13.5px;
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease, transform 0.2s ease;
+  width: fit-content;
+}
+
+.footer-col-nav a:hover {
+  color: #f5c469;
+  transform: translateX(3px);
+}
+
+/* ----------------------------------------------------
+   COLUMN 5: STAY IN THE LOOP & NEWSLETTER
+   ---------------------------------------------------- */
+.footer-col-loop {
+  padding-left: 32px;
+}
+
+.footer-loop-desc {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #988f82;
+  margin: 0 0 18px;
+  max-width: 290px;
+}
+
+.footer-email-form {
+  display: flex;
+  align-items: stretch;
+  max-width: 320px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 4px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.45);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.footer-email-form:focus-within {
+  border-color: rgba(212, 165, 107, 0.55);
+  box-shadow: 0 0 0 1px rgba(212, 165, 107, 0.35);
+}
+
+.footer-email-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 10px 14px;
+  font-size: 12.5px;
+  color: #ffffff;
+  outline: none;
+  min-width: 0;
+}
+
+.footer-email-input::placeholder {
+  color: #6a645b;
+}
+
+.footer-email-submit-btn {
+  background: #d4a56b;
+  border: none;
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #12100d;
+  transition: background 0.2s ease, transform 0.15s ease;
+  flex-shrink: 0;
+}
+
+.footer-email-submit-btn:hover {
+  background: #f5c469;
+}
+
+.footer-email-submit-btn:active {
+  transform: scale(0.96);
+}
+
+.footer-subscribe-confirm {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #d4a56b;
+  letter-spacing: 0.05em;
+}
+
+.footer-social-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-social-icon {
+  color: #d4a56b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-social-icon:hover {
+  color: #fce1a9;
+  transform: translateY(-2px);
+  filter: drop-shadow(0 2px 8px rgba(245, 196, 105, 0.4));
+}
+
+.footer-contact-email {
+  color: #a89f92;
+  font-size: 13px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+  display: inline-block;
+  width: fit-content;
+}
+
+.footer-contact-email:hover {
+  color: #f5c469;
+}
+
+/* ----------------------------------------------------
+   BOTTOM BAR (COPYRIGHT & PRINCIPLES)
+   ---------------------------------------------------- */
+.footer-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 0 0;
+  font-size: 11.5px;
+  color: #8a8275;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.footer-copyright {
+  color: #8a8275;
+}
+
+.footer-principles {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: #a89f92;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.footer-principles .footer-pipe {
+  font-size: 11px;
+  color: #a87d46;
+}
+
+/* ----------------------------------------------------
+   RESPONSIVE DESIGN (TABLET & MOBILE)
+   ---------------------------------------------------- */
+@media (max-width: 1120px) and (min-width: 901px) {
+  .footer-main-grid {
+    grid-template-columns: 1.5fr 0.85fr 0.95fr 0.8fr 1.3fr;
+  }
+
+  .footer-col {
+    padding: 36px 18px;
+  }
+
+  .footer-col-brand {
+    padding-left: 0;
+    padding-right: 22px;
+  }
+
+  .footer-col-loop {
+    padding-left: 20px;
+  }
+}
+
+/* Tablet View (641px - 900px): Balanced 3-column nav */
+@media (max-width: 900px) and (min-width: 641px) {
+  .footer-main-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: none;
+  }
+
+  .footer-col-brand {
+    grid-column: 1 / -1;
+    padding: 32px 0 26px;
+    border-right: none;
+    border-bottom: 1px solid rgba(197, 154, 100, 0.3);
+  }
+
+  .footer-col-explore {
+    padding: 28px 18px 28px 0;
+    border-right: 1px solid rgba(197, 154, 100, 0.25);
+    border-bottom: 1px solid rgba(197, 154, 100, 0.25);
+  }
+
+  .footer-col-expertise {
+    padding: 28px 18px;
+    border-right: 1px solid rgba(197, 154, 100, 0.25);
+    border-bottom: 1px solid rgba(197, 154, 100, 0.25);
+  }
+
+  .footer-col-company {
+    padding: 28px 0 28px 18px;
+    border-right: none;
+    border-bottom: 1px solid rgba(197, 154, 100, 0.25);
+  }
+
+  .footer-col-loop {
+    grid-column: 1 / -1;
+    padding: 30px 0 12px;
+    border-right: none;
+    border-bottom: none;
+  }
+}
+
+/* Phone View (<= 640px): Neat 2-column with horizontal company links */
+@media (max-width: 640px) {
+  .luxury-marble-footer {
+    padding: 38px 5vw max(24px, env(safe-area-inset-bottom, 24px));
+  }
+
+  .footer-main-grid {
+    grid-template-columns: 1fr 1fr;
+    border-bottom: none;
+  }
+
+  .footer-col-brand {
+    grid-column: 1 / -1;
+    padding: 20px 0 18px;
+    border-right: none;
+    border-bottom: 1px solid rgba(197, 154, 100, 0.3);
+  }
+
+  .footer-logo-link {
+    max-width: 310px;
+    margin-bottom: 18px;
+  }
+
+  .footer-disciplines-row {
+    gap: 6px 12px;
+    font-size: 9.5px;
+    justify-content: flex-start;
+  }
+
+  .footer-disciplines-row .footer-pipe {
+    display: none;
+  }
+
+  .footer-disciplines-row a {
+    position: relative;
+    padding-right: 12px;
+  }
+
+  .footer-disciplines-row a:not(:last-child)::after {
+    content: "·";
+    position: absolute;
+    right: 0;
+    color: #a87d46;
+    font-weight: 700;
+  }
+
+  .footer-col-explore {
+    padding: 22px 14px 22px 0;
+    border-right: 1px solid rgba(197, 154, 100, 0.25);
+    border-bottom: 1px solid rgba(197, 154, 100, 0.25);
+  }
+
+  .footer-col-expertise {
+    padding: 22px 0 22px 14px;
+    border-right: none;
+    border-bottom: 1px solid rgba(197, 154, 100, 0.25);
+  }
+
+  .footer-col-company {
+    grid-column: 1 / -1;
+    padding: 18px 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(197, 154, 100, 0.25);
+  }
+
+  .footer-col-company .footer-col-heading {
+    margin-bottom: 14px;
+  }
+
+  .footer-col-company .footer-col-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px 22px;
+  }
+
+  .footer-col-loop {
+    grid-column: 1 / -1;
+    padding: 24px 0 8px;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .footer-email-form {
+    max-width: 100%;
+  }
+
+  .footer-bottom-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding-top: 20px;
+    font-size: 11px;
+  }
+
+  .footer-principles {
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    font-size: 10px;
+  }
+
+  .footer-principles .footer-pipe {
+    display: none;
+  }
+
+  .footer-principles span:not(:last-child)::after {
+    content: "·";
+    margin-left: 8px;
+    color: #a87d46;
+  }
+}

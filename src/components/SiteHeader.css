@@ -1,0 +1,400 @@
+/* Invisible sensor strip at top of screen for mouse hover detection (desktop with mouse only) */
+.header-top-trigger-zone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  z-index: 999;
+  pointer-events: auto;
+}
+
+@media (hover: none), (pointer: coarse), (max-width: 1024px) {
+  .header-top-trigger-zone {
+    display: none !important;
+    pointer-events: none !important;
+  }
+}
+
+/* Floating Header Wrapper */
+.floating-header-wrapper {
+  position: fixed;
+  top: calc(22px - (10px * var(--scroll-shrink, 0)));
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  padding: 0 calc(24px - (8px * var(--scroll-shrink, 0)));
+  transition: transform 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.3s ease,
+              top 0.25s ease,
+              padding 0.25s ease;
+  will-change: transform, opacity;
+}
+
+/* Vanished state when arriving at 3rd section */
+.floating-header-wrapper.is-hidden {
+  transform: translateY(-140%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Visible and Popped-up states */
+.floating-header-wrapper.is-visible,
+.floating-header-wrapper.is-popped-up {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Dynamic Capsule Header Pill: becomes shorter and shorter as you scroll */
+.floating-site-header {
+  pointer-events: auto;
+  width: min(calc(1280px - (240px * var(--scroll-shrink, 0))), 100%);
+  height: calc(76px - (20px * var(--scroll-shrink, 0)));
+  background: rgba(12, 14, 20, 0.94);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, calc(0.15 + (0.05 * var(--scroll-shrink, 0))));
+  border-radius: 9999px;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5), 0 3px 8px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 calc(12px - (2px * var(--scroll-shrink, 0))) 0 calc(26px - (8px * var(--scroll-shrink, 0)));
+  gap: calc(28px - (10px * var(--scroll-shrink, 0)));
+  transition: width 0.2s ease,
+              height 0.2s ease,
+              padding 0.2s ease,
+              gap 0.2s ease,
+              box-shadow 0.3s ease,
+              background 0.3s ease;
+}
+
+/* Popped-up glow when revealed on hover or backwards scroll */
+.floating-header-wrapper.is-popped-up .floating-site-header {
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(245, 196, 105, 0.28);
+}
+
+/* Brand inside floating pill - scales down progressively */
+.floating-site-header .brand {
+  display: flex;
+  align-items: center;
+  gap: calc(12px - (3px * var(--scroll-shrink, 0)));
+  text-decoration: none;
+  min-width: fit-content;
+}
+
+.floating-site-header .brand img {
+  width: calc(44px - (10px * var(--scroll-shrink, 0)));
+  height: calc(44px - (10px * var(--scroll-shrink, 0)));
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+.floating-site-header .brand-word {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: calc(22px - (4px * var(--scroll-shrink, 0)));
+  letter-spacing: 0.13em;
+  color: #ffffff;
+  line-height: 1;
+  transition: font-size 0.2s ease;
+}
+
+.floating-site-header .brand-word small {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8.5px;
+  letter-spacing: 0.18em;
+  color: #c5a477;
+  margin-top: 4px;
+  opacity: calc(1 - (2 * var(--scroll-shrink, 0)));
+  transition: opacity 0.2s ease;
+}
+
+/* Desktop nav links inside pill */
+.floating-site-header .desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, calc(2.5vw - (0.5vw * var(--scroll-shrink, 0))), 38px);
+  flex: 1;
+}
+
+.floating-site-header .desktop-nav a {
+  font-size: calc(15px - (1.5px * var(--scroll-shrink, 0)));
+  font-weight: 500;
+  color: #d8d2c8;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease, transform 0.2s ease, font-size 0.2s ease;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.floating-site-header .desktop-nav a:hover {
+  color: #f5c469;
+  transform: translateY(-1px);
+}
+
+/* Header actions & Pill CTA Button */
+.floating-site-header .header-actions {
+  display: flex;
+  align-items: center;
+  gap: calc(14px - (4px * var(--scroll-shrink, 0)));
+}
+
+.floating-site-header .header-pill-btn {
+  background: #f5c469;
+  color: #12100d;
+  border-radius: 9999px;
+  padding: calc(12px - (3.5px * var(--scroll-shrink, 0))) calc(26px - (8px * var(--scroll-shrink, 0)));
+  font-size: calc(12px - (1.2px * var(--scroll-shrink, 0)));
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: calc(9px - (3px * var(--scroll-shrink, 0)));
+  text-decoration: none;
+  border: none;
+  box-shadow: 0 4px 16px rgba(245, 196, 105, 0.38);
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.floating-site-header .header-pill-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.floating-site-header .header-pill-btn:hover {
+  background: #fdd788;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 22px rgba(245, 196, 105, 0.55);
+}
+
+.floating-site-header .header-pill-btn:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* Mobile responsive styles */
+.floating-site-header .mobile-menu {
+  display: none;
+}
+
+@media (max-width: 990px) {
+  .floating-header-wrapper {
+    top: max(14px, env(safe-area-inset-top, 14px));
+    padding: 0 14px;
+  }
+
+  .floating-site-header {
+    height: calc(60px - (10px * var(--scroll-shrink, 0)));
+    padding: 0 10px 0 18px;
+    gap: 16px;
+  }
+
+  .floating-site-header .desktop-nav {
+    display: none;
+  }
+
+  .floating-site-header .brand img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .floating-site-header .brand-word {
+    font-size: 18px;
+  }
+
+  .floating-site-header .brand-word small {
+    display: none;
+  }
+
+  .floating-site-header .header-pill-btn {
+    padding: 9px 18px;
+    font-size: 11px;
+    min-height: 38px;
+  }
+
+  .floating-site-header .mobile-menu {
+    display: block;
+    position: relative;
+  }
+
+  .floating-site-header .mobile-menu:not([open]) nav {
+    display: none !important;
+  }
+
+  .floating-site-header .mobile-menu summary {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    list-style: none;
+    margin-left: 2px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .floating-site-header .mobile-menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .floating-site-header .mobile-menu summary span {
+    background: #f2eee8;
+    width: 22px;
+    height: 2px;
+    border-radius: 2px;
+    display: block;
+  }
+
+  .floating-site-header .mobile-menu nav {
+    background: rgba(14, 16, 22, 0.98);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 18px;
+    flex-direction: column;
+    padding: 16px 20px;
+    display: flex;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: auto !important;
+    right: 0 !important;
+    width: min(220px, calc(100vw - 28px));
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(245, 196, 105, 0.22);
+    z-index: 1002;
+  }
+
+  .floating-site-header .mobile-menu nav a {
+    color: #e8e2d8;
+    padding: 13px 0;
+    font-size: 15px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: color 0.2s ease;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    touch-action: manipulation;
+  }
+
+  .floating-site-header .mobile-menu nav a:hover,
+  .floating-site-header .mobile-menu nav a:active {
+    color: #f5c469;
+  }
+
+  .floating-site-header .mobile-menu nav a:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .floating-header-wrapper {
+    padding: 0 10px;
+    top: max(8px, env(safe-area-inset-top, 8px));
+  }
+
+  .floating-site-header {
+    height: calc(52px - (6px * var(--scroll-shrink, 0)));
+    padding: 0 8px 0 12px;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .floating-site-header .mobile-menu nav {
+    top: calc(100% + 8px);
+    right: -2px !important;
+    left: auto !important;
+    width: min(210px, calc(100vw - 24px));
+  }
+
+  .floating-site-header .brand {
+    gap: 8px;
+    min-width: 0;
+    flex-shrink: 1;
+  }
+
+  .floating-site-header .brand img {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+
+  .floating-site-header .brand-word {
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+  }
+
+  .floating-site-header .brand-word small {
+    display: none;
+  }
+
+  .floating-site-header .header-pill-btn {
+    padding: 7px 12px;
+    font-size: 10px;
+    gap: 5px;
+    min-height: 34px;
+    flex-shrink: 0;
+  }
+
+  .floating-site-header .header-actions {
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  .floating-site-header .mobile-menu summary {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 375px) {
+  .floating-header-wrapper {
+    padding: 0 6px;
+  }
+
+  .floating-site-header {
+    padding: 0 6px 0 10px;
+    gap: 6px;
+  }
+
+  .floating-site-header .brand {
+    gap: 6px;
+  }
+
+  .floating-site-header .brand img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .floating-site-header .brand-word {
+    font-size: 13.5px;
+  }
+
+  .floating-site-header .header-pill-btn {
+    padding: 6px 9px;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+  }
+}
+
+/* Adjust top padding on pages for the floating header */
+.split-hero-left {
+  padding-top: clamp(110px, 14vh, 135px) !important;
+}
+
+.subhero-copy {
+  padding-top: clamp(110px, 14vh, 135px) !important;
+}
+
+.contact-intro {
+  padding-top: clamp(125px, 16vh, 150px) !important;
+}

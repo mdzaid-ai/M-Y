@@ -169,6 +169,7 @@ export function SiteHeader({ navigate }) {
             <a href="/real-estate" onClick={(e) => handleLinkClick(e, '/real-estate')}>Real estate</a>
             <a href="/construction" onClick={(e) => handleLinkClick(e, '/construction')}>Construction</a>
             <a href="/interiors" onClick={(e) => handleLinkClick(e, '/interiors')}>Interiors</a>
+            <a href="/management" onClick={(e) => handleLinkClick(e, '/management')}>Management</a>
             <a href="/about" onClick={(e) => handleLinkClick(e, '/about')}>About</a>
           </nav>
 
@@ -196,6 +197,7 @@ export function SiteHeader({ navigate }) {
                 <a href="/real-estate" onClick={(e) => handleLinkClick(e, '/real-estate')}>Real estate</a>
                 <a href="/construction" onClick={(e) => handleLinkClick(e, '/construction')}>Construction</a>
                 <a href="/interiors" onClick={(e) => handleLinkClick(e, '/interiors')}>Interiors</a>
+                <a href="/management" onClick={(e) => handleLinkClick(e, '/management')}>Management</a>
                 <a href="/about" onClick={(e) => handleLinkClick(e, '/about')}>About</a>
                 <a href="/contact" onClick={(e) => handleLinkClick(e, '/contact')}>Contact</a>
               </nav>

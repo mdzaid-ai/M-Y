@@ -1,0 +1,409 @@
+.management-page {
+  background: #f4f0e9;
+  color: #191715;
+}
+
+.management-page h1,
+.management-page h2,
+.management-page h3,
+.management-teaser h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  letter-spacing: -.045em;
+}
+
+.management-page i,
+.management-page em,
+.management-teaser i {
+  font-weight: 400;
+}
+
+.management-overline {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .21em;
+  text-transform: uppercase;
+}
+
+.management-hero {
+  min-height: min(850px, 100svh);
+  position: relative;
+  display: flex;
+  color: #fffaf0;
+  background: #252019;
+}
+
+.management-hero-image,
+.management-hero-shade {
+  position: absolute;
+  inset: 0;
+}
+
+.management-hero-image {
+  background: url('/modhaus-place.webp') center 45% / cover no-repeat;
+}
+
+.management-hero-shade {
+  background: linear-gradient(90deg, rgba(17,16,15,.84) 0%, rgba(17,16,15,.46) 47%, rgba(17,16,15,.05) 100%),
+    linear-gradient(0deg, rgba(10,9,8,.62), transparent 55%);
+}
+
+.management-hero-content {
+  z-index: 1;
+  width: 100%;
+  padding: 150px 5.5vw 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.management-hero-top,
+.management-hero-index {
+  display: flex;
+  gap: 28px;
+  font-size: 10px;
+  letter-spacing: .18em;
+}
+
+.management-hero-top {
+  justify-content: space-between;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255,255,255,.38);
+}
+
+.management-hero-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.management-hero-bottom > div {
+  max-width: 790px;
+}
+
+.management-hero .management-overline {
+  color: #e9c78a;
+}
+
+.management-hero h1 {
+  margin: 18px 0 20px;
+  font-size: clamp(56px, 7.2vw, 115px);
+  line-height: .98;
+}
+
+.management-hero h1 em {
+  color: #f2d8aa;
+}
+
+.management-hero-intro {
+  max-width: 480px;
+  font-size: clamp(16px, 1.3vw, 19px);
+  line-height: 1.65;
+  color: rgba(255,250,240,.8);
+}
+
+.management-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 36px;
+  margin-top: 32px;
+  border: 1px solid rgba(255,255,255,.65);
+  border-radius: 100px;
+  padding: 14px 18px 14px 23px;
+  color: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  transition: background .25s, color .25s;
+}
+
+.management-hero-cta:hover {
+  background: #fffaf0;
+  color: #191715;
+}
+
+.management-hero-index {
+  white-space: nowrap;
+  color: rgba(255,255,255,.78);
+}
+
+.management-intro {
+  padding-top: 110px;
+  padding-bottom: 115px;
+}
+
+.management-intro-grid {
+  display: grid;
+  grid-template-columns: 1.3fr .7fr;
+  align-items: end;
+  gap: 8vw;
+  margin-top: 70px;
+}
+
+.management-intro h2,
+.management-care h2,
+.management-continuity h2,
+.management-final h2,
+.management-teaser h2 {
+  font-size: clamp(46px, 5.6vw, 88px);
+  line-height: 1.06;
+}
+
+.management-intro h2 i,
+.management-care h2 i,
+.management-continuity h2 i,
+.management-final h2 i,
+.management-teaser h2 i {
+  color: #a87345;
+}
+
+.management-intro-grid p {
+  max-width: 450px;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.management-intro-grid span {
+  display: block;
+  margin-top: 38px;
+  border-top: 1px solid #bdb4a7;
+  padding-top: 18px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .18em;
+}
+
+.management-care {
+  background: #1a1918;
+  color: #f5f0e8;
+  padding-top: 98px;
+  padding-bottom: 110px;
+}
+
+.management-care .section-kicker {
+  color: #c5ae8b;
+}
+
+.management-care-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.management-care h2 {
+  margin-top: 42px;
+}
+
+.management-care-heading > p {
+  max-width: 330px;
+  color: #bcb5ac;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.management-care-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1fr;
+  gap: 14px;
+}
+
+.management-care-card {
+  min-width: 0;
+  border: 1px solid #45413c;
+  background: #242320;
+}
+
+.management-care-photo {
+  height: 340px;
+  background-size: cover;
+  background-position: center;
+}
+
+.management-care-photo-villa { background-image: url('/modhaus-place.webp'); }
+.management-care-photo-interior { background-image: url('/modhaus-interior.webp'); }
+.management-care-photo-place { background-image: url('/modhaus-detail-community.webp'); }
+
+.management-care-card-copy {
+  min-height: 210px;
+  padding: 24px 26px 30px;
+}
+
+.management-care-card-copy span {
+  color: #caab7d;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .15em;
+}
+
+.management-care-card h3 {
+  margin: 24px 0 12px;
+  font-size: clamp(26px, 2.2vw, 36px);
+}
+
+.management-care-card p {
+  max-width: 360px;
+  color: #bcb5ac;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.management-continuity,
+.management-teaser {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 650px;
+}
+
+.management-continuity-image {
+  background: url('/modhaus-living-room.webp') center / cover no-repeat;
+}
+
+.management-continuity-copy,
+.management-teaser-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 85px 6vw;
+}
+
+.management-continuity h2 {
+  margin: auto 0 30px;
+}
+
+.management-continuity-copy > p,
+.management-teaser-copy > p:not(.management-overline) {
+  max-width: 510px;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.management-continuity-links {
+  display: grid;
+  width: 100%;
+  margin-top: 50px;
+  border-top: 1px solid #c7beb2;
+}
+
+.management-continuity-links a {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid #c7beb2;
+  color: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.management-continuity-links a:hover,
+.management-final-link:hover {
+  color: #9a6338;
+}
+
+.management-final {
+  background: #d9ceb9;
+  padding-top: 90px;
+  padding-bottom: 100px;
+}
+
+.management-final-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.management-final-link {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 16px;
+  color: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.management-teaser {
+  min-height: 570px;
+  background: #e7e0d3;
+  color: #191715;
+}
+
+.management-teaser-image {
+  background: url('/modhaus-place.webp') center 55% / cover no-repeat;
+}
+
+.management-teaser-copy .management-overline {
+  margin-top: auto;
+  color: #9a6338;
+}
+
+.management-teaser h2 {
+  margin: 20px 0 22px;
+}
+
+.management-teaser .text-link {
+  margin-top: 34px;
+}
+
+@media (max-width: 900px) {
+  .management-hero { min-height: 780px; }
+  .management-hero-content { padding: 130px 5vw 45px; }
+  .management-hero-bottom { display: block; }
+  .management-hero-index { margin-top: 42px; }
+  .management-intro-grid { gap: 35px; }
+  .management-care-grid { grid-template-columns: 1fr 1fr; }
+  .management-care-card-large { grid-column: 1 / -1; }
+  .management-continuity,
+  .management-teaser { min-height: 0; }
+}
+
+@media (max-width: 640px) {
+  .management-hero { min-height: 740px; }
+  .management-hero-image { background-position: 62% center; }
+  .management-hero-shade {
+    background: linear-gradient(0deg, rgba(15,14,12,.85), rgba(15,14,12,.18) 78%),
+      linear-gradient(90deg, rgba(15,14,12,.28), transparent);
+  }
+  .management-hero-content { padding: 120px 5vw 30px; }
+  .management-hero-top { gap: 15px; font-size: 8px; line-height: 1.5; }
+  .management-hero-top span { text-align: right; }
+  .management-hero h1 { font-size: clamp(43px, 11vw, 64px); }
+  .management-hero-intro { font-size: 15px; }
+  .management-hero-index { font-size: 9px; }
+  .management-intro,
+  .management-care,
+  .management-final { padding-top: 70px; padding-bottom: 75px; }
+  .management-intro-grid { display: block; margin-top: 45px; }
+  .management-intro-grid p { margin-top: 30px; font-size: 16px; }
+  .management-intro h2,
+  .management-care h2,
+  .management-continuity h2,
+  .management-final h2,
+  .management-teaser h2 { font-size: clamp(39px, 9vw, 54px); }
+  .management-care-heading { display: block; margin-bottom: 34px; }
+  .management-care-heading > p { margin-top: 24px; font-size: 15px; }
+  .management-care-grid { grid-template-columns: 1fr; }
+  .management-care-card-large { grid-column: auto; }
+  .management-care-photo { height: 290px; }
+  .management-care-card-copy { min-height: 0; padding: 22px 20px 26px; }
+  .management-continuity,
+  .management-teaser { display: flex; flex-direction: column; }
+  .management-continuity-image,
+  .management-teaser-image { min-height: 360px; }
+  .management-continuity-copy,
+  .management-teaser-copy { padding: 60px 5vw 70px; }
+  .management-continuity h2 { margin: 45px 0 20px; }
+  .management-teaser-copy .management-overline { margin-top: 50px; }
+  .management-final-row { display: block; margin-top: 45px; }
+  .management-final-link { width: max-content; max-width: 100%; margin-top: 38px; gap: 18px; }
+}

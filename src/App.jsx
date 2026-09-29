@@ -8,6 +8,7 @@ import { ConstructionPage } from './pages/ConstructionPage';
 import { InteriorsPage } from './pages/InteriorsPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
+import { ManagementPage } from './pages/ManagementPage';
 
 export function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname || '/');
@@ -50,6 +51,9 @@ export function App() {
       case '/contact':
         document.title = 'Contact — MODHAUS — M/Y Realty & Housing';
         break;
+      case '/management':
+        document.title = 'Property Management — MODHAUS — M/Y Realty & Housing';
+        break;
       default:
         document.title = 'MODHAUS — M/Y Realty & Housing';
     }
@@ -69,6 +73,8 @@ export function App() {
         return <AboutPage navigate={navigate} />;
       case '/contact':
         return <ContactPage navigate={navigate} />;
+      case '/management':
+        return <ManagementPage navigate={navigate} />;
       case '/':
       default:
         return <HomePage navigate={navigate} />;

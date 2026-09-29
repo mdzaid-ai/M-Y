@@ -127,6 +127,9 @@ export function Footer({ navigate }) {
               <a href="/interiors" onClick={(e) => handleLinkClick(e, '/interiors')}>
                 Interior Design
               </a>
+              <a href="/management" onClick={(e) => handleLinkClick(e, '/management')}>
+                Property Management
+              </a>
               <a href="/services" onClick={(e) => handleLinkClick(e, '/services')}>
                 Architecture
               </a>

@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowUpRight } from '../components/Icons';
 import { FloorExplorer } from '../components/FloorExplorer';
 import { NewHero } from '../components/NewHero';
+import './ManagementPage.css';
 
 export function HomePage({ navigate }) {
   const handleLink = (e, path) => {
@@ -166,9 +167,22 @@ export function HomePage({ navigate }) {
         </div>
       </section>
 
+      <section className="management-teaser" aria-labelledby="management-teaser-title">
+        <div className="management-teaser-image" role="img" aria-label="Contemporary villa at dusk" />
+        <div className="management-teaser-copy">
+          <div className="section-kicker">AFTER THE KEYS <span>005 — MANAGEMENT</span></div>
+          <p className="management-overline">PROPERTY MANAGEMENT · VILLAS & HOMES</p>
+          <h2 id="management-teaser-title">Made to last.<br /><i>Made to live in.</i></h2>
+          <p>A place deserves care long after it is built. Explore a thoughtful way to look after the home, its details, and the people who live there.</p>
+          <a href="/management" className="text-link" onClick={(e) => handleLink(e, '/management')}>
+            Explore management <ArrowUpRight size={19} />
+          </a>
+        </div>
+      </section>
+
       <section className="closing-cta section-pad">
         <div className="section-kicker">
-          YOUR NEXT CHAPTER <span>005 — BEGIN</span>
+          YOUR NEXT CHAPTER <span>006 — BEGIN</span>
         </div>
         <h2>
           What could we<br />

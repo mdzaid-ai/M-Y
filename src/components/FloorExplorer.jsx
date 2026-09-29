@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowUpRight } from './Icons';
+import './FloorExplorer.css';
 
 const stages = [
   {

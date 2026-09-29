@@ -1,0 +1,186 @@
+/* FloorExplorer & Journey Section - Responsive & Mobile Refinements */
+
+/* Mobile view (<= 650px) */
+@media (max-width: 650px) {
+  .floor-explorer {
+    display: block;
+    min-height: auto;
+    width: 100%;
+  }
+
+  .floor-list {
+    border-right: 0;
+    border-bottom: 1px solid #3d352e;
+  }
+
+  .floor-tab {
+    min-height: 56px;
+    padding: 0 18px;
+    display: grid;
+    grid-template-columns: 34px 1fr 20px;
+    align-items: center;
+    gap: 12px;
+    background: #201d1a;
+    border-bottom: 1px solid #342c26;
+    transition: background 0.2s ease, padding 0.2s ease;
+  }
+
+  .floor-tab span {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: #c4a482;
+  }
+
+  .floor-tab strong {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 21px;
+    font-weight: 400;
+    color: #e7e0d8;
+  }
+
+  .floor-tab .floor-plus {
+    font-size: 16px;
+    color: #c4a482;
+    text-align: right;
+  }
+
+  .floor-tab.selected {
+    background: #a45739;
+    padding-left: 20px;
+  }
+
+  .floor-tab.selected strong {
+    color: #ffffff;
+  }
+
+  .floor-tab.selected span,
+  .floor-tab.selected .floor-plus {
+    color: #faede4;
+  }
+
+  /* Image Visual Area */
+  .floor-visual {
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    min-height: 400px;
+    height: 400px;
+    width: 100%;
+  }
+
+  /* Overlay Stage Card on Mobile */
+  .stage-card {
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    right: 14px;
+    width: auto;
+    max-width: calc(100% - 28px);
+    box-sizing: border-box;
+    background: #f0ece5;
+    padding: 16px 18px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+  }
+
+  .stage-card .stage-index {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    color: #8c5d45;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(166, 86, 56, 0.25);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  .stage-card .stage-index span {
+    color: #7d7268;
+    font-weight: 500;
+  }
+
+  .stage-card .stage-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: #a65638;
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+
+  .stage-card h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 23px;
+    font-weight: 400;
+    color: #1b1917;
+    line-height: 1.15;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+
+  .stage-card p {
+    font-size: 13.5px;
+    line-height: 1.45;
+    color: #554d45;
+    margin: 0;
+    padding-right: 48px; /* Room for the action arrow */
+    max-width: 100%;
+  }
+
+  .stage-card a,
+  .stage-card .stage-card-link {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #a65638;
+    color: #a65638;
+    display: grid;
+    place-items: center;
+    border-radius: 2px;
+    background: transparent;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .stage-card a:active,
+  .stage-card .stage-card-link:active {
+    background: #a65638;
+    color: #ffffff;
+  }
+
+  /* Journey section footer below the explorer */
+  .journey-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .journey-footer > span {
+    max-width: 100% !important;
+    white-space: nowrap;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: #8c827a;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .journey-footer .text-link {
+    font-size: 13.5px;
+    letter-spacing: 0.08em;
+    color: #e5cfac;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+}

@@ -66,9 +66,127 @@ export function HomePage({ navigate }) {
         </div>
       </section>
 
+      {/* Property Management Showcase - Placed directly below "Watch an idea take shape" */}
+      <section className="home-management section-pad" id="management">
+        <div className="section-kicker">
+          PROPERTY MANAGEMENT <span>003 — CARE BEYOND THE BUILD</span>
+        </div>
+
+        <div className="home-management-header">
+          <div className="home-management-titles">
+            <span className="home-management-tag">VILLAS · PRIVATE RESIDENCES · ESTATES</span>
+            <h2>
+              Care for your villa.<br />
+              <i>And every place you call home.</i>
+            </h2>
+          </div>
+          <div className="home-management-intro">
+            <p>
+              Handing over the keys is only the beginning. MODHAUS provides continuous, meticulous management for private villas, architect-designed residences, and seasonal estates—preserving the beauty, craft, and function of your home through every season.
+            </p>
+            <a
+              href="/management"
+              className="text-link inverse"
+              onClick={(e) => handleLink(e, '/management')}
+            >
+              Explore all property management <ArrowUpRight size={19} />
+            </a>
+          </div>
+        </div>
+
+        {/* Villa & Property Showcase Grid */}
+        <div className="home-management-grid">
+          <article className="home-management-card">
+            <div className="home-management-photo-wrap">
+              <div
+                className="home-management-photo"
+                style={{ backgroundImage: 'url(/modhaus-site-building-dusk.webp)' }}
+                role="img"
+                aria-label="Private luxury villa at dusk"
+              />
+              <span className="home-management-badge">01 / PRIVATE VILLAS</span>
+            </div>
+            <div className="home-management-content">
+              <h3>Private Villas &amp; Estates</h3>
+              <p>
+                Complete grounds and building stewardship. Pool systems, landscape architecture, climate control, and weekly checks keep your villa immaculate year-round.
+              </p>
+              <ul className="home-management-features">
+                <li>Grounds &amp; Pool Maintenance</li>
+                <li>Preventive Climate &amp; MEP Audits</li>
+                <li>Full 24/7 Security &amp; Monitoring</li>
+              </ul>
+            </div>
+          </article>
+
+          <article className="home-management-card">
+            <div className="home-management-photo-wrap">
+              <div
+                className="home-management-photo"
+                style={{ backgroundImage: 'url(/modhaus-living-room.webp)' }}
+                role="img"
+                aria-label="Finished interior living room"
+              />
+              <span className="home-management-badge">02 / INTERIORS &amp; FINISHES</span>
+            </div>
+            <div className="home-management-content">
+              <h3>Interior &amp; Finish Preservation</h3>
+              <p>
+                Craft preservation for high-end materials. Specialist care for bespoke woodwork, natural marble, acoustic walls, and luxury lighting fixtures.
+              </p>
+              <ul className="home-management-features">
+                <li>Marble &amp; Natural Stone Care</li>
+                <li>Fine Woodwork &amp; Joinery Polish</li>
+                <li>Smart Home &amp; Lighting Upkeep</li>
+              </ul>
+            </div>
+          </article>
+
+          <article className="home-management-card">
+            <div className="home-management-photo-wrap">
+              <div
+                className="home-management-photo"
+                style={{ backgroundImage: 'url(/modhaus-place.webp)' }}
+                role="img"
+                aria-label="Modern architectural residence"
+              />
+              <span className="home-management-badge">03 / RETREATS &amp; RESIDENCES</span>
+            </div>
+            <div className="home-management-content">
+              <h3>Seasonal &amp; Vacation Homes</h3>
+              <p>
+                Turnkey arrival and departure protocol. We air out the home, stock essentials, calibrate temperatures, and ready every room before you or your guests arrive.
+              </p>
+              <ul className="home-management-features">
+                <li>Pre-Arrival Welcome Staging</li>
+                <li>Seasonal Winterizing &amp; Spring Opening</li>
+                <li>Keyholding &amp; Concierge Access</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div className="home-management-footer">
+          <div className="home-management-cta-text">
+            <h4>Have a villa or residence in mind?</h4>
+            <p>We tailor care schedules to individual properties across the region.</p>
+          </div>
+          <a
+            href="/management"
+            className="round-link light-link"
+            onClick={(e) => handleLink(e, '/management')}
+          >
+            <span>Learn about villa management</span>
+            <span className="round-icon">
+              <ArrowUpRight size={20} />
+            </span>
+          </a>
+        </div>
+      </section>
+
       <section className="services-home section-pad">
         <div className="section-kicker">
-          WHAT WE DO <span>003 — EXPERTISE</span>
+          WHAT WE DO <span>004 — EXPERTISE</span>
         </div>
         <div className="services-title-row">
           <h2>
@@ -148,7 +266,7 @@ export function HomePage({ navigate }) {
         ></div>
         <div className="band-copy">
           <div className="section-kicker">
-            A PLACE TO BELONG <span>004 — DETAIL</span>
+            A PLACE TO BELONG <span>005 — DETAIL</span>
           </div>
           <h2>
             Made to be<br />
@@ -163,19 +281,6 @@ export function HomePage({ navigate }) {
             onClick={(e) => handleLink(e, '/interiors')}
           >
             Explore interiors <ArrowUpRight size={19} />
-          </a>
-        </div>
-      </section>
-
-      <section className="management-teaser" aria-labelledby="management-teaser-title">
-        <div className="management-teaser-image" role="img" aria-label="Contemporary villa at dusk" />
-        <div className="management-teaser-copy">
-          <div className="section-kicker">AFTER THE KEYS <span>005 — MANAGEMENT</span></div>
-          <p className="management-overline">PROPERTY MANAGEMENT · VILLAS & HOMES</p>
-          <h2 id="management-teaser-title">Made to last.<br /><i>Made to live in.</i></h2>
-          <p>A place deserves care long after it is built. Explore a thoughtful way to look after the home, its details, and the people who live there.</p>
-          <a href="/management" className="text-link" onClick={(e) => handleLink(e, '/management')}>
-            Explore management <ArrowUpRight size={19} />
           </a>
         </div>
       </section>

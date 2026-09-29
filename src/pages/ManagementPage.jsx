@@ -14,7 +14,7 @@ export function ManagementPage({ navigate }) {
         <div className="management-hero-image" role="img" aria-label="Contemporary villa in a landscaped setting" />
         <div className="management-hero-shade" />
         <div className="management-hero-content">
-          <div className="management-hero-top">MODHAUS / PROPERTY MANAGEMENT <span>04 — BEYOND THE BUILD</span></div>
+          <div className="management-hero-top">MODHAUS / PROPERTY MANAGEMENT <span>05 — BEYOND THE BUILD</span></div>
           <div className="management-hero-bottom">
             <div>
               <p className="management-overline">VILLAS · HOMES · SPACES TO LIVE</p>
@@ -24,13 +24,13 @@ export function ManagementPage({ navigate }) {
                 Discuss your property <ArrowUpRight size={19} />
               </a>
             </div>
-            <span className="management-hero-index">01 / 04 <span>SCROLL TO EXPLORE ↓</span></span>
+            <span className="management-hero-index">01 / 05 <span>SCROLL TO EXPLORE ↓</span></span>
           </div>
         </div>
       </section>
 
       <section className="management-intro section-pad">
-        <div className="section-kicker">THE IDEA <span>CARE IS PART OF THE VISION</span></div>
+        <div className="section-kicker">THE IDEA <span>01 — CARE IS PART OF THE VISION</span></div>
         <div className="management-intro-grid">
           <h2>Good places deserve<br /><i>good care.</i></h2>
           <div>
@@ -76,10 +76,68 @@ export function ManagementPage({ navigate }) {
         </div>
       </section>
 
+      {/* Places Under Care: Villas & Beyond */}
+      <section className="management-portfolio section-pad">
+        <div className="section-kicker">
+          PLACES UNDER CARE <span>03 — THE PORTFOLIO</span>
+        </div>
+        <div className="management-portfolio-head">
+          <h2>
+            Villas, residences,<br />
+            <i>and places of sanctuary.</i>
+          </h2>
+          <p>
+            Whether an expansive hillside estate, a beachfront villa, or an architectural residence, we shape custom care protocols that match the architecture, climate, and lifestyle of the owners.
+          </p>
+        </div>
+
+        <div className="management-places-grid">
+          <div className="management-place-item">
+            <div className="management-place-img" style={{ backgroundImage: "url('/modhaus-site-building-dusk.webp')" }}>
+              <span className="management-place-pill">PRIVATE VILLAS</span>
+            </div>
+            <div className="management-place-info">
+              <h3>Hillside &amp; Valley Villas</h3>
+              <p>Pool filtration, landscape architecture, stone patio sealing, and seasonal storm preparation.</p>
+            </div>
+          </div>
+
+          <div className="management-place-item">
+            <div className="management-place-img" style={{ backgroundImage: "url('/modhaus-place.webp')" }}>
+              <span className="management-place-pill">COASTAL HOMES</span>
+            </div>
+            <div className="management-place-info">
+              <h3>Modern Seaside Residences</h3>
+              <p>Specialized marine climate protection, glass and joinery care, and high-salinity resistance audits.</p>
+            </div>
+          </div>
+
+          <div className="management-place-item">
+            <div className="management-place-img" style={{ backgroundImage: "url('/modhaus-living-room.webp')" }}>
+              <span className="management-place-pill">BESPOKE INTERIORS</span>
+            </div>
+            <div className="management-place-info">
+              <h3>Architectural Living Spaces</h3>
+              <p>Preservation of custom woodwork, natural marble polish, HVAC zoning, and delicate textile care.</p>
+            </div>
+          </div>
+
+          <div className="management-place-item">
+            <div className="management-place-img" style={{ backgroundImage: "url('/modhaus-belong.webp')" }}>
+              <span className="management-place-pill">FAMILY COMPOUNDS</span>
+            </div>
+            <div className="management-place-info">
+              <h3>Private Enclaves &amp; Compounds</h3>
+              <p>Perimeter security, shared amenities, access management, and coordinated staff housekeeping.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="management-continuity">
         <div className="management-continuity-image" role="img" aria-label="Sunlit living room with warm natural materials" />
         <div className="management-continuity-copy">
-          <div className="section-kicker">ONE CONTINUOUS VISION <span>03 — THE CONNECTION</span></div>
+          <div className="section-kicker">ONE CONTINUOUS VISION <span>04 — THE CONNECTION</span></div>
           <h2>From first plans<br />to <i>everyday living.</i></h2>
           <p>Finding the place, shaping it, and caring for it belong to the same story. Management extends the MODHAUS approach beyond the finished project.</p>
           <div className="management-continuity-links">
@@ -91,7 +149,7 @@ export function ManagementPage({ navigate }) {
       </section>
 
       <section className="management-final section-pad">
-        <div className="section-kicker">LET'S BEGIN <span>04 — YOUR PROPERTY</span></div>
+        <div className="section-kicker">LET'S BEGIN <span>05 — YOUR PROPERTY</span></div>
         <div className="management-final-row">
           <h2>Let's look after<br /><i>what matters.</i></h2>
           <a href="/contact" className="management-final-link" onClick={(e) => handleLink(e, '/contact')}>

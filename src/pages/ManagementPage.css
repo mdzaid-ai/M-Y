@@ -407,3 +407,378 @@
   .management-final-row { display: block; margin-top: 45px; }
   .management-final-link { width: max-content; max-width: 100%; margin-top: 38px; gap: 18px; }
 }
+
+/* ==========================================================================
+   Home Management Section (Directly below "Watch an idea take shape")
+   ========================================================================== */
+.home-management {
+  background: #121110;
+  color: #fffaf0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.home-management-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 48px;
+  margin-top: 36px;
+  margin-bottom: 48px;
+}
+
+.home-management-titles {
+  max-width: 650px;
+}
+
+.home-management-tag {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #caab7d;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.home-management h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(38px, 4.4vw, 64px);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  font-weight: 400;
+  margin: 0;
+}
+
+.home-management h2 i {
+  font-style: italic;
+  color: #e5cfac;
+}
+
+.home-management-intro {
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home-management-intro p {
+  color: #b5ada2;
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.home-management-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.home-management-card {
+  background: #1b1918;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-management-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(202, 171, 125, 0.45);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+}
+
+.home-management-photo-wrap {
+  overflow: hidden;
+  height: 270px;
+  position: relative;
+}
+
+.home-management-photo {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.home-management-card:hover .home-management-photo {
+  transform: scale(1.05);
+}
+
+.home-management-badge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: rgba(14, 13, 12, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e5cfac;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  padding: 5px 12px;
+  border-radius: 2px;
+  z-index: 2;
+}
+
+.home-management-content {
+  padding: 30px 26px 32px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: #1a1817;
+  position: relative;
+  z-index: 2;
+}
+
+.home-management-content h3 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0 0 12px 0;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.home-management-content p {
+  color: #b0a79a;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+}
+
+.home-management-features {
+  list-style: none;
+  padding: 0;
+  margin: auto 0 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.home-management-features li {
+  font-size: 12.5px;
+  color: #d8cebe;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-management-features li::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: #caab7d;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.home-management-footer {
+  margin-top: 48px;
+  padding-top: 36px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.home-management-cta-text h4 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0 0 6px 0;
+  color: #ffffff;
+}
+
+.home-management-cta-text p {
+  font-size: 14px;
+  color: #9d9487;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Management Page Portfolio Section
+   ========================================================================== */
+.management-portfolio {
+  background: #f4f0e9;
+  color: #191715;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.management-portfolio-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin: 36px 0 48px;
+}
+
+.management-portfolio-head h2 {
+  font-size: clamp(36px, 4.2vw, 56px);
+  line-height: 1.05;
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+}
+
+.management-portfolio-head h2 i {
+  font-style: italic;
+}
+
+.management-portfolio-head p {
+  max-width: 400px;
+  color: #6a645c;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.management-places-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.management-place-item {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.management-place-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.management-place-img {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.management-place-pill {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: rgba(18, 16, 14, 0.85);
+  color: #e5cfac;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  padding: 5px 12px;
+  border-radius: 2px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.management-place-info {
+  padding: 28px 24px;
+}
+
+.management-place-info h3 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 24px;
+  margin: 0 0 10px;
+  color: #191715;
+  font-weight: 400;
+}
+
+.management-place-info p {
+  color: #6a645c;
+  font-size: 14.5px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) and (min-width: 651px) {
+  .home-management-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .home-management-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .home-management-card {
+    display: grid;
+    grid-template-columns: 44% 56%;
+  }
+  .home-management-photo-wrap {
+    height: 100%;
+    min-height: 280px;
+  }
+  .management-portfolio-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .home-management-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 24px;
+    margin-bottom: 32px;
+  }
+  .home-management h2 {
+    font-size: clamp(32px, 8.5vw, 44px);
+  }
+  .home-management-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .home-management-photo-wrap,
+  .home-management-photo {
+    height: 230px;
+  }
+  .home-management-content {
+    padding: 24px 20px;
+  }
+  .home-management-content h3 {
+    font-size: 21px;
+  }
+  .home-management-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 36px;
+    padding-top: 28px;
+  }
+  .home-management-footer .round-link {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .management-portfolio-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    margin: 24px 0 32px;
+  }
+  .management-places-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .management-place-img {
+    height: 240px;
+  }
+}
+
